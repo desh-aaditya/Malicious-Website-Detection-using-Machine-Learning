@@ -4,7 +4,8 @@
 
 <p align="center">
 A machine learning–based security system that detects phishing and malicious websites using engineered URL features
-and a structured ML pipeline, supporting both real-time URL analysis and high-accuracy batch prediction.
+and a structured ML pipeline. The system supports both real-time URL analysis and high-accuracy CSV-based batch
+prediction, making it suitable for quick threat screening as well as offline security analysis.
 </p>
 
 <hr/>
@@ -12,10 +13,10 @@ and a structured ML pipeline, supporting both real-time URL analysis and high-ac
 <h2>About the Project</h2>
 
 <ul>
-  <li>This project focuses on detecting malicious and phishing websites using machine learning.</li>
-  <li>The system analyzes URL-level and domain-based features to classify websites as benign or harmful.</li>
-  <li>It supports both real-time detection and offline batch analysis.</li>
-  <li>The project emphasizes correct ML system design rather than only model training.</li>
+  <li>Focuses on detecting phishing and malicious websites using machine learning.</li>
+  <li>Analyzes URL-level, domain-based, and statistical security features.</li>
+  <li>Supports both real-time inference and batch prediction workflows.</li>
+  <li>Emphasizes correct ML system design rather than isolated model training.</li>
 </ul>
 
 <hr/>
@@ -24,21 +25,21 @@ and a structured ML pipeline, supporting both real-time URL analysis and high-ac
 
 <h3>Dual Detection Modes</h3>
 <ul>
-  <li>Real-time URL-based detection for quick phishing analysis.</li>
+  <li>URL-based detection for fast, real-time phishing analysis.</li>
   <li>CSV-based batch detection using pre-engineered features for higher accuracy.</li>
 </ul>
 
 <h3>End-to-End Machine Learning Pipeline</h3>
 <ul>
-  <li>Data ingestion and validation.</li>
-  <li>Feature transformation and preprocessing.</li>
+  <li>Data ingestion, validation, and preprocessing.</li>
+  <li>Feature transformation and engineering.</li>
   <li>Model training, evaluation, and inference.</li>
 </ul>
 
 <h3>Feature-Based Classification</h3>
 <ul>
-  <li>Uses URL structure, domain information, and statistical security features.</li>
-  <li>Ensures feature consistency between training and inference.</li>
+  <li>Uses URL structure, domain characteristics, and statistical security features.</li>
+  <li>Ensures feature consistency between training and inference pipelines.</li>
 </ul>
 
 <h3>ML-First Decision Logic</h3>
@@ -49,16 +50,43 @@ and a structured ML pipeline, supporting both real-time URL analysis and high-ac
 
 <h3>Professional Web Interface</h3>
 <ul>
-  <li>Clean and cyber-themed UI built using FastAPI and Jinja2 templates.</li>
-  <li>Supports URL input and CSV upload workflows.</li>
+  <li>Clean and security-themed UI built using FastAPI and Jinja2 templates.</li>
+  <li>Supports both URL input and CSV upload workflows.</li>
 </ul>
 
 <h3>Production-Style Project Structure</h3>
 <ul>
-  <li>Modular and scalable codebase.</li>
-  <li>Separation of training, inference, and UI layers.</li>
-  <li>Industry-aligned folder structure.</li>
+  <li>Modular, scalable, and maintainable codebase.</li>
+  <li>Clear separation of training, inference, and UI layers.</li>
+  <li>Aligned with industry-standard ML project practices.</li>
 </ul>
+
+<hr/>
+
+<h2>Application Screenshots</h2>
+
+<p align="center">
+Web interface demonstrating real-time URL detection and batch CSV prediction workflows.
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <h3>Main Dashboard</h3>
+      <img src="assets/main.png" width="520"/>
+    </td>
+    <td align="center">
+      <h3>URL-Based Detection</h3>
+      <img src="assets/url.png" width="520"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <h3>CSV-Based Batch Prediction</h3>
+      <img src="assets/csv_prediction.png" width="1000"/>
+    </td>
+  </tr>
+</table>
 
 <hr/>
 
@@ -68,9 +96,9 @@ and a structured ML pipeline, supporting both real-time URL analysis and high-ac
   <li>Designing a complete ETL and ML pipeline for a security use case.</li>
   <li>Understanding how real-world ML projects are structured.</li>
   <li>Separation of data ingestion, transformation, model logic, and UI.</li>
-  <li>Handling feature mismatch issues between training and inference.</li>
+  <li>Handling feature mismatch issues between training and inference data.</li>
   <li>Balancing ML predictions with heuristic indicators.</li>
-  <li>Building ML systems that support both batch and real-time inference.</li>
+  <li>Supporting both batch and real-time ML inference.</li>
 </ul>
 
 <hr/>
@@ -87,11 +115,11 @@ Network_Security/
 │   ├── exception/           # Custom exception handling
 │   └── logging/             # Centralized logging
 │
-├── final_models/            # Trained model and preprocessor
-├── templates/               # UI templates (HTML)
-├── static/                  # CSS and UI assets
-├── prediction_output/       # Generated predictions
-└── app.py                   # FastAPI application entry
+├── final_models/             # Trained model and preprocessor
+├── templates/                # UI templates (HTML)
+├── static/                   # CSS and UI assets
+├── prediction_output/        # Generated predictions
+└── app.py                    # FastAPI application entry
 </pre>
 
 <hr/>
@@ -122,7 +150,7 @@ Network_Security/
 
 <h3>URL-Based Detection (Real-Time)</h3>
 <ul>
-  <li>User submits a URL via the web interface.</li>
+  <li>User submits a URL through the web interface.</li>
   <li>System extracts URL-based features in real time.</li>
   <li>ML model predicts phishing or malicious risk.</li>
   <li>Rule indicators highlight suspicious patterns.</li>
@@ -151,10 +179,10 @@ Network_Security/
 
 <ul>
   <li>Learned how production ML pipelines differ from simple scripts.</li>
-  <li>Understood the importance of feature consistency.</li>
+  <li>Understood the importance of feature consistency between training and inference.</li>
   <li>Gained experience debugging real ML deployment issues.</li>
-  <li>Learned to present ML predictions responsibly.</li>
-  <li>Built confidence in structuring industry-grade ML systems.</li>
+  <li>Learned how to present ML predictions responsibly.</li>
+  <li>Built confidence in structuring industry-grade ML projects.</li>
 </ul>
 
 <hr/>
@@ -163,8 +191,8 @@ Network_Security/
 
 <ul>
   <li>WHOIS-based domain age analysis.</li>
-  <li>DNS and reputation-based features.</li>
-  <li>Model confidence visualization.</li>
+  <li>DNS and reputation-based security features.</li>
+  <li>Model confidence and risk visualization.</li>
   <li>Dockerization and cloud deployment.</li>
   <li>Feature importance and explainability.</li>
 </ul>
@@ -176,5 +204,5 @@ Network_Security/
 <p>
 This project goes beyond basic phishing detection by focusing on proper ML system design,
 ETL pipelines, and realistic deployment constraints. It demonstrates not only model building,
-but also how machine learning systems are engineered and deployed in practice.
+but also how machine learning systems are engineered and deployed in real-world security scenarios.
 </p>
