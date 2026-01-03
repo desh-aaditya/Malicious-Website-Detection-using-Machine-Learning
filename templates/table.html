@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Table</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h2>Predicted Data</h2>
-    {{ table | safe }}
+
+<div class="container">
+    <h2 style="color:#38bdf8;">📊 CSV Prediction Results</h2>
+
+    <div class="table-container">
+        {{ table | safe }}
+    </div>
+
+    <a href="/ui">
+        <button style="margin-top:25px;">⬅ Back to Analysis</button>
+    </a>
+</div>
+
 </body>
 </html>

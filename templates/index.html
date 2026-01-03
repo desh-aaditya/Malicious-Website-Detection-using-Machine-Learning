@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Detection System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐 Phishing Detection System</h1>
+    <p class="subtitle">
+        Machine Learning based Website Security Analysis
+    </p>
+
+    <!-- ================= URL CHECK ================= -->
+    <h3>🔗 URL Detection (Quick Analysis)</h3>
+
+    <form method="post" action="/ui/predict-url">
+        <input type="text" name="url" placeholder="Enter website URL (e.g. https://example.com)" required>
+        <button type="submit">Analyze URL</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result-card">
+        <h2 class="
+            {% if 'Phishing' in prediction %}phishing
+            {% elif 'Suspicious' in prediction %}suspicious
+            {% else %}legitimate{% endif %}
+        ">
+            {{ prediction }}
+        </h2>
+
+        {% if rule_signals %}
+        <ul>
+            {% for rule in rule_signals %}
+            <li>{{ rule }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <hr>
+
+    <!-- ================= CSV CHECK ================= -->
+    <h3>📁 CSV Detection (High Accuracy)</h3>
+
+    <form method="post" action="/ui/predict-csv" enctype="multipart/form-data">
+
+        <div class="file-input">
+            <label class="file-label" for="csvFile">
+                📂 Choose CSV File
+            </label>
+            <input id="csvFile" type="file" name="file" accept=".csv" required
+                   onchange="document.getElementById('fileName').innerText = this.files[0].name">
+            <div id="fileName" class="file-name">No file selected</div>
+        </div>
+
+        <button type="submit">Analyze CSV</button>
+    </form>
+
+    <p class="note">
+        CSV-based analysis uses full engineered features and provides higher accuracy.
+    </p>
+</div>
+
+</body>
+</html>

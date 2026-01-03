@@ -1,0 +1,188 @@
+/* ---------- GLOBAL ---------- */
+body {
+    background: radial-gradient(circle at top, #020617, #020617, #020617);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: #e5e7eb;
+    margin: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #334155, transparent);
+    margin: 30px 0;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    max-width: 780px;
+    margin: 60px auto;
+    background: linear-gradient(180deg, #020617, #020617);
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow:
+        0 0 30px rgba(34,197,94,0.15),
+        inset 0 0 0 1px #1e293b;
+}
+
+/* ---------- HEADINGS ---------- */
+h1 {
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(90deg, #22c55e, #38bdf8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 35px;
+}
+
+h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+/* ---------- INPUTS ---------- */
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #020617;
+    color: #e5e7eb;
+    border: 1px solid #1e293b;
+    font-size: 15px;
+}
+
+input[type="text"]:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 1px #22c55e;
+}
+
+/* ---------- FILE INPUT (CUSTOM) ---------- */
+.file-input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.file-input input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: block;
+    padding: 14px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #38bdf8, #22c55e);
+    color: #020617;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.file-label:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(56,189,248,0.35);
+}
+
+.file-name {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #020617;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(34,197,94,0.35);
+}
+
+/* ---------- RESULT CARD ---------- */
+.result-card {
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 14px;
+    background: #020617;
+    border: 1px solid #1e293b;
+}
+
+.result-card h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* ---------- STATUS COLORS ---------- */
+.phishing {
+    color: #ef4444;
+}
+
+.legitimate {
+    color: #22c55e;
+}
+
+.suspicious {
+    color: #facc15;
+}
+
+/* ---------- LIST ---------- */
+ul {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+li {
+    color: #f87171;
+    font-size: 14px;
+}
+
+/* ---------- TABLE ---------- */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #1e293b;
+}
+
+th {
+    color: #38bdf8;
+    text-align: left;
+}
+
+.note {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 10px;
+}
